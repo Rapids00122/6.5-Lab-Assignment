@@ -3,5 +3,13 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div x-data="{ names: ['Richard', 'John', 'Nathan', 'Drew', 'Jennifer', 'Wesley', 'Martin', 'Chris', 'Eric', 'Aaron'], randomNumber: null }">
+    <button @click="randomNumber = generateRandomNumber()">Random Name</button>
+    <h1 x-show="randomNumber !== null" x-text="names[randomNumber]"></h1>
+
+    <script>
+      function generateRandomNumber() {
+        return Math.floor(Math.random() * 10);
+      }
+    </script>
+  </div>
