@@ -5,7 +5,7 @@ title: 11ty Boilerplate
 
 <div x-data="{ names: ['Richard', 'John', 'Nathan', 'Drew', 'Jennifer', 'Wesley', 'Martin', 'Chris', 'Eric', 'Aaron'], randomNumber: null }">
     <button @click="randomNumber = generateRandomNumber()">Random Name</button>
-    <h1 x-show="randomNumber !== null" x-text="names[randomNumber]"></h1>
+    <h1 x-text="names[randomNumber]"></h1>
 
     <script>
       function generateRandomNumber() {
